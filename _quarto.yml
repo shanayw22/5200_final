@@ -1,0 +1,16 @@
+project:
+  type: website
+  output-dir: _site
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: true
+    code-fold: true
+    self-contained: true
+
+execute:
+  echo: false
+  warning: false
+  freeze: auto

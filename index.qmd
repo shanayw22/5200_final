@@ -1,0 +1,28 @@
+---
+title: "How Has Global Energy Consumption Evolved Over 50 Years?"
+---
+
+## 🌍 Introduction
+
+Global energy use has transformed significantly since 1971. In this story, we explore patterns in consumption, emissions, and energy transitions.
+
+## 🌐 Energy Use by Country
+
+```{python}
+#| warning: false
+#| message: false
+
+import pandas as pd
+import plotly.express as px
+
+try:
+    df = pd.read_csv('data/owid-energy-data.csv')
+    global_df = df[df['country'] == 'World']
+    fig = px.line(global_df, x='year', y='energy_per_capita', 
+                 title='Global Energy Use Per Capita')
+    fig.show()
+except Exception as e:
+    print(f"Error: {str(e)}")
+```
+
+
